@@ -57,7 +57,7 @@ This guide assumes you have basic familiarity with navigating files and folders 
     * **Quality (for MP3):** For the best results, select `Extreme`.
     * Click `Export`. If prompted, you can choose to replace an existing file.
     ---
-![image](ss/Audacity_Export_Settings.png)
+![image](SS/Audacity_Export_Settings.png)
 
 # 🚀 Custom Sound Effects for Unity 6 Games (Combat Master is used in this example)
     ---
@@ -75,12 +75,12 @@ This crucial step involves creating a small `.assets` file that will contain you
     * Click `Create Project`.
     * *Note: This process may take a few moments depending on your PC's specifications.*
     ---
-    ![Unity Create Project](ss/Unityproject.png)
+![Unity Create Project](SS/Unityproject.png)
     ---
 3.  **Import Audio into Unity:**
     * Once the Unity Editor loads, simply drag and drop your exported custom audio file (MP3/WAV) from **Part 1** into the `Project` window (usually located at the bottom of the Unity interface).
     ---
-    ![Unity Create Project](ss/inproject.png)
+![Unity Create Project](SS/inproject.png)
     ---
 4.  **Add Audio to Scene:**
     * Drag your newly imported audio file from the `Project` window into the `Scene` window. This action will create an `AudioSource` component in your scene.
@@ -91,7 +91,7 @@ This crucial step involves creating a small `.assets` file that will contain you
     * Select this newly created `Build` folder and click `Save`.
     * Unity will now compile and build your project, generating the necessary `.assets` files.
     ---
-    ![Unity Create Project](ss/buildset.png)
+![Unity Create Project](SS/buildset.png)
     ---
 6.  **Close Unity Editor:** After the build process is complete, you can safely close the Unity Editor.
 
@@ -110,13 +110,13 @@ This section guides you through using AssetStudioGUI to pinpoint the exact asset
     * Go to `File` > `Load Folder`.
     * Browse to your game's `Data` folder (or the `StreamingAssets\Bundles` folder if you suspect the audio is there) and select it. AssetStudioGUI will begin the process of parsing the game's assets.
     ---
-    ![Unity Create Project](ss/asgui.png)
+![Unity Create Project](SS/asgui.png)
     ---
 4.  **Find the Target Audio:**
     * Once the assets are loaded, use the search bar at the top or apply filters (e.g., filter by `AudioClip`) to locate the specific sound effect you intend to replace. For example, if you're replacing the "menu audio," type `menu` in the search bar.
     * **Crucial Step: Copy PathID:** Select the desired audio clip from the results list in the left pane. In the right-hand pane, find the `PathID` field. Right-click on the numerical value next to `PathID` and select `Copy text`. **Save this `PathID` somewhere safe** (e.g., in a Notepad document); you will need it in the next step.
     ---
-    ![Unity Create Project](ss/pathid.png)
+![Unity Create Project](SS/pathid.png)
     ---
 5.  **Close AssetStudioGUI:** You can close AssetStudioGUI once you have successfully copied the `PathID`.
 
