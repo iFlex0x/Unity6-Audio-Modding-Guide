@@ -18,22 +18,22 @@ Before diving in, make sure you have the following essential applications downlo
 
 * ### Unity Hub & Unity Editor (Unity 6)
     * **Purpose:** To create a simple Unity project. This project will serve as a vessel to generate a dummy `.assets` file containing your custom audio, which we'll then use as a template.
-    * **Download:** ```[https://unity.com/download](https://unity.com/download)```
+    * **Download:** [https://unity.com/download](https://unity.com/download)
 
 * ### AssetStudioGUI
-    * **Version:** ```v0.18.0``` (crucial for compatibility with the demonstrated process).
+    * **Version:** `v0.18.0` (crucial for compatibility with the demonstrated process).
     * **Purpose:** To extract existing game assets (like original sound effects) and, most importantly, identify their unique `PathID`.
-    * **Download:** ```[https://github.com/aelurum/AssetStudio/releases/tag/v0.18.0](https://github.com/aelurum/AssetStudio/releases/tag/v0.18.0)```
+    * **Download:** [https://github.com/aelurum/AssetStudio/releases/tag/v0.18.0](https://github.com/aelurum/AssetStudio/releases/tag/v0.18.0)
 
 * ### UABEA (Unity Asset Bundle Extractor)
     * **Version:** The **Nightly version** explicitly compatible with Unity 6. Older versions might not correctly handle Unity 6 asset formats.
     * **Purpose:** This powerful tool is used to inject your prepared custom audio data directly into the game's `.assets` files.
-    * **Download:** ```[https://nightly.link/nesrak1/UABEA/workflows/dotnet-desktop/master/uabea-windows.zip](https://nightly.link/nesrak1/UABEA/workflows/dotnet-desktop/master/uabea-windows.zip)```
+    * **Download:** [https://nightly.link/nesrak1/UABEA/workflows/dotnet-desktop/master/uabea-windows.zip](https://nightly.link/nesrak1/UABEA/workflows/dotnet-desktop/master/uabea-windows.zip)
     * **Important Note:** Always verify that the UABEA version you download explicitly supports Unity 6 to avoid compatibility issues.
 
 * ### Audacity (or your preferred Audio Editor)
     * **Purpose:** Essential for editing and exporting your custom sound effects in a compatible format (like MP3 or WAV).
-    * **Download:** ```[https://www.audacityteam.org/download/](https://www.audacityteam.org/download/)```
+    * **Download:** [https://www.audacityteam.org/download/](https://www.audacityteam.org/download/)
 
 ---
 
@@ -144,10 +144,10 @@ This is where the magic happens: you'll inject your custom audio directly into t
     * Drag and drop the **`sharedassets0.assets` file** (from your `Build` folder, NOT the renamed `.resource` file) into the UABEA window.
     * In the list, find your custom audio clip (it will likely be of type `AudioClip`).
     * **Export Dump:** Select your custom audio clip, then click `Export Dump`. Save this dump file to a convenient location (e.g., a new folder called `dumps`).
-        ```text
-        my_custom_audio.txt
-        ```
-        This `.txt` file contains the data of your custom sound.
+    ```text
+    my_custom_audio.txt
+    ```
+    This `.txt` file contains the data of your custom sound.
 
 4.  **Edit the Dump File:**
     * Open the newly created `.txt` dump file (e.g., `my_custom_audio.txt`) with a text editor (like Notepad).
@@ -177,15 +177,15 @@ This is where the magic happens: you'll inject your custom audio directly into t
     * In UABEA, click on `Info`.
     * In the `Asset Info` window, click `View`.
     * In the search bar, paste the `PathID` you copied from AssetStudioGUI (from **Part 3, Step 4**).
-        ```text
-        <pasted_path_id_value_here>
-        ```
-        Click `Okay`. This action will highlight the original game audio asset you intend to replace.
+    ```text
+    <pasted_path_id_value_here>
+    ```
+    Click `Okay`. This action will highlight the original game audio asset you intend to replace.
     * With the correct asset highlighted, click `Import Dump`.
     * Browse to the location where you saved your custom audio dump file (e.g., `my_custom_audio.txt`) and select it.
-        ```text
-        my_custom_audio.txt
-        ```
+    ```text
+    my_custom_audio.txt
+    ```
     * Click `Open`.
     * Close the `Asset Info` window.
 
@@ -202,10 +202,10 @@ You're almost there! Just a few more steps to get your custom audio into the gam
 1.  **Copy Modified File:**
     * Go back to your `Build` folder (from **Part 2**).
     * Inside `[ProjectName]_Data`, copy the **renamed dummy resource file**.
-        ```text
-        menu_custom.resource
-        ```
-        (or whatever you named it).
+    ```text
+    menu_custom.resource
+    ```
+    (or whatever you named it).
 
 2.  **Paste into Game Directory:**
     * Navigate to your game's `Data` folder (e.g., `C:\Program Files (x86)\Steam\steamapps\common\Combat Master\Data`).
