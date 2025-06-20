@@ -137,9 +137,13 @@ This is where the magic happens: you'll inject your custom audio directly into t
     * In the list, find your custom audio clip (it will likely be of type `AudioClip`).
     * **Export Dump:** Select your custom audio clip, then click `Export Dump`. Save this dump file (e.g., `my_custom_audio.txt`) to a convenient location (e.g., a new folder called `dumps`). This `.txt` file contains the data of your custom sound.
     * **Edit the Dump File:** Open the newly created `.txt` dump file (e.g., `my_custom_audio.txt`) with a text editor (like Notepad). You will see a line referring to the original resource file (e.g., `sharedassets0.resource`). **Change this line to the name you used for your renamed dummy resource file** (e.g., `menu_custom.resource`). This is crucial for UABEA to correctly locate the resource when importing.
-    * *Optional Batch File Utility:* There's a Batch file I made to automate the process of changing these lines in the dump file.
+
+   ![Unity Create Project](SS/renamedmanual.png)
+
+    * *Optional Batch File Utility:* There's a Batch file I made to automate the process of changing these lines in the dump file, you can drag multiple Dump files at once to that Batch file, and enter the name of the resource file,.
     ---
-    *Keep UABEA open.*
+
+   Keep UABEA open.
 
 4.  **Load the Game's Original Asset File in UABEA:**
     * In the *same UABEA window*, go to `File` > `Open`.
@@ -187,11 +191,3 @@ Encountering issues? Don't worry, here are some common solutions:
 * **No Assets Found:** Double-check that you are loading the correct game files (`.assets` or `.bundle` files) into AssetStudioGUI and UABEA. Make sure you're not trying to load general game executables.
 * **Game Crashing:** A crash might occur if the asset structure was not correctly maintained during the injection or if the injected dump is somehow corrupted. Carefully re-verify each step, paying close attention to the `PathID` and the export/import of the dump.
 * **Sound Not Playing:** Verify that your custom audio was exported correctly in **Part 1**. Also, ensure that the `PathID` you used in **Part 4** perfectly matches the target audio in the game.
-
----
-
-## 💬 Support
-
-If you have any questions, didn't understand a particular part of the video, or run into any issues, don't hesitate to reach out! Feel free to join our vibrant Discord server – there's a dedicated help channel where you can ask for assistance and connect with the community.
-
----
