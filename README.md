@@ -57,7 +57,9 @@ This guide assumes you have basic familiarity with navigating files and folders 
     * **Quality (for MP3):** For the best results, select `Extreme`.
     * Click `Export`. If prompted, you can choose to replace an existing file.
     ---
-    ![Audacity Export Settings](ss/Audacity_Export_Settings.png)
+![image](ss/Audacity_Export_Settings.png)
+
+# 🚀 Custom Sound Effects for Unity 6 Games (Combat Master is used in this example)
     ---
 5.  **Close Audacity:** Once your audio is successfully exported, you can close Audacity.
 
